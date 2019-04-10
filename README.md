@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# __**Test technique Web**__
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+Le but de ce test est de créer une application simple. Cette application doit nous permettre d'évaluer l'état de vos connaisances sur les technologies React, Redux et Firebase. Aucune limite de temps n'est imposé pour réaliser ce test (dans la limite du raisonable). Il n'y a donc aucune raison de se presser. Favorisez la qualité à la quantité.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Vous êtes libre d’utiliser les libraries externes de votre choix si nécessaire. À vous également de choisir l'architecture que vous pensez la plus adaptée. Attendez vous à être questionné sur ces choix.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Données fournies
 
-### `npm test`
+- Un projet bootstrappé avec create-react-app et les librairies nécessaires
+- Un accès à une base de données Firebase Realtime Database avec les données suivantes :
+    - Une table Equipments avec pour chaque équipement :
+        - name: Nom de l'équipement,
+        - building: Nom du batiment,
+        - domain: Domaine technique,
+        - niveau: Niveau ou se situe l'équipement,
+        - local: Local ou se situe l'équipement,
+        - photo: URL de la photo de l'équipement
+        - brand: Marque,
+        - model: Modèle,
+        - serialNumber: Numéro de série
+        - quantity: Quantité,
+        - status: Dernier statut constaté,
+        - notes: Prise de notes,
+        - nbFaults: Nombre de défauts sur l'équipement,
+    - Une table Checkpoints avec pour chaque point de contrôle :
+        - equipmentKey: Clé firebase de l'équipement concerné,
+        - name: Nom du point de contrôle,
+        - fault: Nom du défaut (optionnel),
+        - recommandation: Préconisation (si défaut),
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Consignes
 
-### `npm run build`
+L'application devra comporter au moins deux pages, aucun système d'authentification n'est requis.
+L'UI de l'application ne vous est pas imposée, laissez parler votre créativité. Cependant ce n'est pas l'élément principal sur lequel vous serez jugé, privilégiez la qualité du code et la pertinence de vos choix techniques. 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Page 1 - Liste des équipements :
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Le but de cette page est :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Afficher la liste des équipements triés alphabétiquement par leur nom, la cellule comprendra :	
+	- Le nom de l'équipement ;
+	- Le domaine de l'équipement ;
+	- Le nombre de défauts associés ;
+	- La photo de l'équipement.
+	
+2. Un barre de recherche permettant de filtrer les équipements par leur domaine ou par leur nom ;
+3. Pouvoir accéder à la page de détail d'un équipement en cliquant dessus.
 
-### `npm run eject`
+### Page 2 - Détail d'un équipement : 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Le but de cette page est :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Afficher la photo de l'équipement ;
+2. Afficher une section des infos de l'équipement (nom, domaine, etc...) ;
+3. Afficher une section des caractéristiques de l'équipement ;
+4. Afficher la liste des points de contrôle et défauts associés. Pour chaque point de contrôle, afficher :
+	- Le point de contrôle ;
+	- Le défaut si il existe ;
+	- La préconisation si le défaut existe ;
+	- La photo si elle existe.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Fonctionnalités supplémentaires
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Si vous avez le temps et l'envie, vous pouvez développer des fonctionnalités supplémentaires :
+    
+- Permettre la modification des champs (demander l'autorisation pour écrire dans la base de données)
+- Ajouter plus de critères de recherche pour la liste des équipements (marque, niveau, ...)
+- Tout autre fonctionnalité qui peut améliorer l'expérience utilisateur
 
-## Learn More
+## Pour finir
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Bon courage !!!
