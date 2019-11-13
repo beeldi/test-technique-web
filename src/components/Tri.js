@@ -1,4 +1,5 @@
 import React from 'react';
+import './Tri.css'
 
 class Tri extends React.Component{
     state={tri:"Domaine"}
@@ -9,7 +10,7 @@ class Tri extends React.Component{
 
     render() {
         return (
-            <div className="ui simple selection dropdown">
+            <div className="ui simple selection dropdown tri">
                 <input type="hidden" name="gender"/>
                 <i className="dropdown icon"></i>
                 <div className="text">{this.state.tri}</div>

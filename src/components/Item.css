@@ -1,0 +1,8 @@
+.item-content{
+    margin-top: 20px;
+}
+
+#item:hover {
+    background: grey;
+    cursor: pointer;
+}
