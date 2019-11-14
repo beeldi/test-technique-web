@@ -1,5 +1,11 @@
 .item-content{
     margin-top: 20px;
+    cursor: pointer;
+}
+
+.item{
+    width: 60%;
+    margin-left: 20%;
 }
 
 #item:hover {

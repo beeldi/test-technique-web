@@ -2,10 +2,11 @@ import React from 'react';
 import './Tri.css'
 
 class Tri extends React.Component{
-    state={tri:"Domaine"}
+    state={tri:"name"}
 
     handleChange = (event) => {
         this.setState({tri: event.target.dataset.value});
+        this.props.onTriggerTri(event.target.dataset.value);
     }
 
     render() {
@@ -15,8 +16,8 @@ class Tri extends React.Component{
                 <i className="dropdown icon"></i>
                 <div className="text">{this.state.tri}</div>
                 <div className="menu" onClick={this.handleChange}>
-                    <div className="item" data-value="Domaine">Domaine</div>
-                    <div className="item" data-value="Nom">Nom</div>
+                    <div className="item" data-value="domain">domain</div>
+                    <div className="item" data-value="name">name</div>
                 </div>
             </div>
         );

@@ -1,11 +1,11 @@
 import React from 'react'
 import './Item.css'
 
-const Item = (data) => {
-    var machine = data.data;
+const Item = ({data, onItemSelect}) => {
+    var machine = data;
 
     return (
-        <div id="item" className="ui inverted segment grid">
+        <div onClick={() => onItemSelect(data)} id="item" className="ui item inverted segment grid">
             <div className="four wide column">
                 <img className = "ui big image" src={machine.photo} alt=""/>
             </div>
