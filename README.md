@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Le but de ce test est de créer une application simple. Cette application doit nous permettre d'évaluer l'état de vos connaisances sur les technologies React, Redux et Firebase. Aucune limite de temps n'est imposé pour réaliser ce test (dans la limite du raisonable). Il n'y a donc aucune raison de se presser. Favorisez la qualité à la quantité.
+Le but de ce test est de créer une application simple. Cette application doit nous permettre d'évaluer l'état de vos connaisances sur les technologies React, Redux (et Firebase). Aucune limite de temps n'est imposé pour réaliser ce test (dans la limite du raisonable). Il n'y a donc aucune raison de se presser. Favorisez la qualité à la quantité.
 
 Vous êtes libre d’utiliser les libraries externes de votre choix si nécessaire. À vous également de choisir l'architecture que vous pensez la plus adaptée. Attendez vous à être questionné sur ces choix.
 
@@ -30,12 +30,14 @@ Vous êtes libre d’utiliser les libraries externes de votre choix si nécessai
         - name: Nom du point de contrôle,
         - fault: Nom du défaut (optionnel),
         - recommandation: Préconisation (si défaut),
+- Deux fichiers .csv contenant les données de ces deux tables
 
 ## Consignes
 
 L'application devra comporter au moins deux pages, aucun système d'authentification n'est requis.
 L'UI de l'application ne vous est pas imposée, laissez parler votre créativité. Cependant ce n'est pas l'élément principal sur lequel vous serez jugé, privilégiez la qualité du code et la pertinence de vos choix techniques. 
 
+Pour la provenance des données, vous avez la possibiité d'utiliser la base de données Firebase fournie ou de mettre en place un autre système de base de données grâce aux fichiers .csv fournis ou d'utiliser directemment ces fichiers .csv.
 ### Page 1 - Liste des équipements :
 
 Le but de cette page est :
